@@ -1,5 +1,5 @@
 {
-	"name": "utils",
+	"name": "@devprtcl/utils",
 	"version": "1.0.0",
 	"description": "TypeScript Utilities",
 	"main": "index.js",
