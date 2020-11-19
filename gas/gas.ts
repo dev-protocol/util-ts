@@ -3,7 +3,6 @@
 /* eslint-disable functional/functional-parameters */
 import bent from 'bent'
 import { utils } from 'ethers'
-import { BigNumber } from '@ethersproject/bignumber'
 
 type EGSResponse = {
 	readonly fast: number
@@ -28,14 +27,14 @@ export const createFastestGasPriceFetcher = (
 	fetcher: bent.RequestFunction<bent.ValidResponse>
 ) =>
 	((egs) => async () =>
-		egs().then((res) => utils.parseUnits(`${res.fastest / 10}`, 'gwei')))(
-		createEGSFetcher(fetcher)
-	)
+		egs().then((res) =>
+			utils.parseUnits(`${res.fastest / 10}`, 'gwei').toString()
+		))(createEGSFetcher(fetcher))
 
 export const ethgas = (token: string) =>
 	bent(`https://ethgasstation.info/api/ethgasAPI.json?api-key=${token}`, 'json')
 
-export const getFastGasPrice = async (token: string): Promise<BigNumber> => {
+export const getFastGasPrice = async (token: string): Promise<string> => {
 	const fetcher = createFastestGasPriceFetcher(ethgas(token))
-	return await fetcher()
+	return (await fetcher()).toString()
 }
