@@ -1,7 +1,7 @@
 {
-	"name": "template-repos-ts",
+	"name": "utils",
 	"version": "1.0.0",
-	"description": "Template repository for using TypeScript",
+	"description": "TypeScript Utilities",
 	"main": "index.js",
 	"scripts": {
 		"test": "ava",
@@ -16,8 +16,9 @@
 	"author": "",
 	"license": "MPL-2.0",
 	"dependencies": {
-		"ramda": "^0.27.1",
-		"web3": "^1.2.11"
+		"bent": "7.3.12",
+		"ethereum-waffle": "3.2.0",
+		"ramda": "^0.27.1"
 	},
 	"devDependencies": {
 		"@ava/typescript": "1.1.1",
@@ -26,6 +27,7 @@
 		"@types/ramda": "0.27.32",
 		"@typescript-eslint/eslint-plugin": "4.8.1",
 		"@typescript-eslint/parser": "4.8.1",
+		"@types/bent": "7.3.2",
 		"ava": "3.13.0",
 		"dotenv": "8.2.0",
 		"eslint": "7.13.0",
