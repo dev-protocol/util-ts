@@ -1,3 +1,4 @@
 import { ethGasStationFetcher } from './gas'
+import { whenDefined, whenDefinedAll } from './utils'
 
-export { ethGasStationFetcher }
+export { ethGasStationFetcher, whenDefined, whenDefinedAll }
