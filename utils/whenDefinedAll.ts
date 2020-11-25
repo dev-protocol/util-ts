@@ -54,8 +54,8 @@ export function whenDefinedAll<D1, D2, D3, D4, D5, D6, F>(
 		]
 	) => F
 ): UndefinedOr<F>
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function whenDefinedAll(depends: any, fn: any): any {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
+export function whenDefinedAll(depends: unknown, fn: any): unknown {
 	return whenDefined(
 		depends,
 		cond([
