@@ -18,16 +18,28 @@ type EGSResponse = {
 	readonly fastestWait: number
 }
 
+type Speed = 'fastest' | 'fast' | 'average' | 'safeLow'
+
 const createEGSFetcher = (
 	fetcher: bent.RequestFunction<bent.ValidResponse>
 ) => async (): Promise<EGSResponse> =>
 	fetcher('').then((r: unknown) => (r as unknown) as EGSResponse)
 
-export const ethGasStationFetcher = (token: string) =>
+export const ethGasStationFetcher = (token: string, speed: Speed = 'fastest') =>
 	((egs) => async () =>
-		egs().then((res) =>
-			utils.parseUnits(`${res.fastest / 10}`, 'gwei').toString()
-		))(
+		egs().then((res) => {
+			const gas =
+				speed === 'fastest'
+					? res.fastest
+					: speed === 'fast'
+					? res.fast
+					: speed === 'average'
+					? res.average
+					: speed === 'safeLow'
+					? res.safeLow
+					: 0
+			return utils.parseUnits(`${gas / 10}`, 'gwei').toString()
+		}))(
 		createEGSFetcher(
 			bent(
 				`https://ethgasstation.info/api/ethgasAPI.json?api-key=${token}`,
