@@ -23,18 +23,15 @@ const createEGSFetcher = (
 ) => async (): Promise<EGSResponse> =>
 	fetcher('').then((r: unknown) => (r as unknown) as EGSResponse)
 
-export const createFastestGasPriceFetcher = (
-	fetcher: bent.RequestFunction<bent.ValidResponse>
-) =>
+export const ethGasStationFetcher = (token: string) =>
 	((egs) => async () =>
 		egs().then((res) =>
 			utils.parseUnits(`${res.fastest / 10}`, 'gwei').toString()
-		))(createEGSFetcher(fetcher))
-
-export const ethgas = (token: string) =>
-	bent(`https://ethgasstation.info/api/ethgasAPI.json?api-key=${token}`, 'json')
-
-export const getFastGasPrice = async (token: string): Promise<string> => {
-	const fetcher = createFastestGasPriceFetcher(ethgas(token))
-	return (await fetcher()).toString()
-}
+		))(
+		createEGSFetcher(
+			bent(
+				`https://ethgasstation.info/api/ethgasAPI.json?api-key=${token}`,
+				'json'
+			)
+		)
+	)

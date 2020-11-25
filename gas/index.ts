@@ -1,3 +1,3 @@
-import { getFastGasPrice, createFastestGasPriceFetcher, ethgas } from './gas'
+import { ethGasStationFetcher } from './eth-gas-station'
 
-export { getFastGasPrice, createFastestGasPriceFetcher, ethgas }
+export { ethGasStationFetcher }
