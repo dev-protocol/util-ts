@@ -1,6 +1,6 @@
 {
 	"name": "@devprtcl/util-ts",
-	"version": "1.3.2",
+	"version": "1.3.3",
 	"description": "TypeScript Utilities",
 	"main": "cjs/index.js",
 	"module": "esm/index.js",
