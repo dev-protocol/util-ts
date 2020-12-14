@@ -1,5 +1,5 @@
 {
-	"name": "@devprtcl/util-ts",
+	"name": "@devprotocol/util-ts",
 	"version": "1.4.0",
 	"description": "TypeScript Utilities",
 	"main": "cjs/index.js",
@@ -64,10 +64,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/dev-protocol/utils.git"
+		"url": "git+https://github.com/dev-protocol/util-ts.git"
 	},
 	"bugs": {
-		"url": "https://github.com/dev-protocol/utils/issues"
+		"url": "https://github.com/dev-protocol/util-ts/issues"
 	},
-	"homepage": "https://github.com/dev-protocol/utils#readme"
+	"homepage": "https://github.com/dev-protocol/util-ts#readme"
 }
