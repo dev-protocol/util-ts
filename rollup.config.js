@@ -1,5 +1,5 @@
 import typescript from '@rollup/plugin-typescript'
-import multi from '@rollup/plugin-multi-entry';
+import multi from '@rollup/plugin-multi-entry'
 import dts from 'rollup-plugin-dts'
 
 export default [
