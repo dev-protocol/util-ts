@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-let */
 /* eslint-disable functional/no-expression-statement */
 import test from 'ava'
-import { ethGasStationFetcher } from './index'
+import { ethGasStationFetcher } from './eth-gas-station'
 
 test('get fastest gas price', async (t) => {
 	let fastest = ethGasStationFetcher('ETHGAS-TOKEN')

@@ -1,5 +1,5 @@
 import { cond, isNil, always, T } from 'ramda'
-import { UndefinedOr } from '../types'
+import { UndefinedOr } from '../types/types'
 
 export const whenDefined = <D, F>(
 	depends: D,

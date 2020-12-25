@@ -1,3 +1,3 @@
 import { ethGasStationFetcher } from './eth-gas-station'
 
-export { ethGasStationFetcher }
+export const gas = { ethGasStationFetcher }

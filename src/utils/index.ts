@@ -1,4 +1,4 @@
 import { whenDefined } from './whenDefined'
 import { whenDefinedAll } from './whenDefinedAll'
 
-export { whenDefined, whenDefinedAll }
+export const utils= { whenDefined, whenDefinedAll }

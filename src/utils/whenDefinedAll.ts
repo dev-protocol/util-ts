@@ -1,5 +1,5 @@
 import { cond, always, T } from 'ramda'
-import { UndefinedOr } from '../types'
+import { UndefinedOr } from '../types/types'
 import { isNotNil } from './isNotNil'
 import { whenDefined } from './whenDefined'
 

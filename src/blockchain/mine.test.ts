@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-let */
 /* eslint-disable functional/no-expression-statement */
 import test from 'ava'
-import { mine } from './index'
+import { mine } from './mine'
 import { MockProvider } from 'ethereum-waffle'
 
 test('get fastest gas price', async (t) => {

@@ -4,10 +4,11 @@
 		"target": "es6",
 		"outDir": "dist",
 		"rootDir": ".",
-		"sourceMap": true,
+		"sourceMap": false,
 		"strict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"declaration": true
 	}
 }
