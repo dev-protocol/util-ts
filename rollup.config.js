@@ -15,11 +15,11 @@ export default [
 				format: 'cjs',
 			},
 		],
-		plugins: [typescript({ module: 'esnext' }), multi()],
+		plugins: [multi(), typescript({ module: 'esnext' })],
 	},
 	{
-		input: 'dist/src/index.d.ts',
+		input: ['dist/**/*.d.ts', '!**/*.test.d.ts'],
 		output: [{ file: 'dist/util-ts.d.ts', format: 'es' }],
-		plugins: [dts()],
+		plugins: [multi(), dts()],
 	},
 ]
