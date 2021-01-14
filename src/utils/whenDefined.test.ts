@@ -12,12 +12,12 @@ test('The function is executed successfully when the value is present..', async 
 	const arg = {
 		value: 5,
 	}
-	const result = await whenDefined(arg.value, (value) => testFunc(value))
+	const result = await whenDefined(arg.value, testFunc)
 	t.is(result, '6')
 })
 
 test('The function does not execute correctly when the value does not exist.', async (t) => {
 	const arg = { value: undefined }
-	const result = await whenDefined(arg.value, (value) => testFunc(value))
+	const result = await whenDefined(arg.value, testFunc)
 	t.is(result, undefined)
 })
