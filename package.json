@@ -26,14 +26,18 @@
 		"lint:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
 		"prepack": "yarn test && yarn build",
 		"clean": "rimraf dist",
-		"prebuild": "yarn clean"
+		"prebuild": "yarn clean",
+		"prepare": "husky install"
 	},
 	"author": "",
 	"license": "MPL-2.0",
 	"dependencies": {
 		"bent": "7.3.12",
 		"ethereum-waffle": "3.3.0",
-		"ramda": "^0.27.1"
+		"ramda": "^0.27.1",
+		"axios": "0.21.1",
+		"sinon": "9.2.4",
+		"url-join": "4.0.1"
 	},
 	"devDependencies": {
 		"@ava/typescript": "1.1.1",
@@ -45,6 +49,8 @@
 		"@types/ramda": "0.27.38",
 		"@typescript-eslint/eslint-plugin": "4.17.0",
 		"@typescript-eslint/parser": "4.17.0",
+		"@types/url-join": "4.0.0",
+		"@types/sinon": "9.0.11",
 		"ava": "3.15.0",
 		"dotenv": "8.2.0",
 		"eslint": "7.21.0",
@@ -66,11 +72,6 @@
 			"rewritePaths": {
 				"/": "dist/"
 			}
-		}
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn lint"
 		}
 	},
 	"repository": {
