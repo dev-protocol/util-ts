@@ -17,7 +17,7 @@ test.before(() => {
 	get = sinon.stub(axios, 'get')
 	get
 		.withArgs(
-			'https://programmable-proxy.azureedge.net?s=http://hogehoge1&tweet.fields=entities'
+			'https://programmable-proxy.azureedge.net?s=https://api.twitter.com/2/tweets/hogehogege&tweet.fields=entities'
 		)
 		.resolves({
 			status: 200,
@@ -33,7 +33,7 @@ test.before(() => {
 		})
 	get
 		.withArgs(
-			'https://programmable-proxy.azureedge.net?s=http://hogehoge2&tweet.fields=entities'
+			'https://programmable-proxy.azureedge.net?s=https://api.twitter.com/2/tweets/hogehogege2&tweet.fields=entities'
 		)
 		.resolves({
 			status: 200,
@@ -50,23 +50,23 @@ test.before(() => {
 		})
 	get
 		.withArgs(
-			'https://programmable-proxy.azureedge.net?s=http://hugahuga&tweet.fields=entities'
+			'https://programmable-proxy.azureedge.net?s=https://api.twitter.com/2/tweets/hugahuga&tweet.fields=entities'
 		)
 		.resolves({ status: 400, data: { error: 'error message' } })
 })
 test('api is sccessed.', async (t) => {
-	const [isStatusGreen, urls] = await getTextUrls('http://hogehoge1')
+	const [isStatusGreen, urls] = await getTextUrls('hogehogege')
 	t.is(isStatusGreen, true)
 	t.is(urls[0], 'https://qqqq')
 })
 test('When multiple URLs are included.', async (t) => {
-	const [isStatusGreen, urls] = await getTextUrls('http://hogehoge2')
+	const [isStatusGreen, urls] = await getTextUrls('hogehogege2')
 	t.is(isStatusGreen, true)
 	t.is(urls[0], 'https://qqqq')
 	t.is(urls[1], 'https://iiii')
 })
 test('api is failed.', async (t) => {
-	const [isStatusGreen, urls] = await getTextUrls('http://hugahuga')
+	const [isStatusGreen, urls] = await getTextUrls('hugahuga')
 	t.is(isStatusGreen, false)
 	t.is(urls.length, 0)
 })

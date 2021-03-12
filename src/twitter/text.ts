@@ -3,11 +3,12 @@ import urljoin from 'url-join'
 import axios from 'axios'
 
 export const getTextUrls = async (
-	url: string
+	twitterId: string
 ): Promise<readonly [boolean, readonly string[]]> => {
+	const twitterUrl = urljoin('https://api.twitter.com/2/tweets', twitterId)
 	const programmableProxyUrl: string = urljoin(
 		'https://programmable-proxy.azureedge.net',
-		`?s=${url}?tweet.fields=entities`
+		`?s=${twitterUrl}?tweet.fields=entities`
 	)
 	const res = await axios.get(programmableProxyUrl)
 	const isStatusGreen = res.status === 200
