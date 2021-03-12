@@ -33,7 +33,10 @@
 	"dependencies": {
 		"bent": "7.3.12",
 		"ethereum-waffle": "3.2.1",
-		"ramda": "^0.27.1"
+		"ramda": "^0.27.1",
+		"axios": "0.21.1",
+		"sinon": "9.2.4",
+		"url-join": "4.0.1"
 	},
 	"devDependencies": {
 		"@ava/typescript": "1.1.1",
@@ -45,6 +48,8 @@
 		"@types/ramda": "0.27.34",
 		"@typescript-eslint/eslint-plugin": "4.13.0",
 		"@typescript-eslint/parser": "4.13.0",
+		"@types/url-join": "4.0.0",
+		"@types/sinon": "9.0.11",
 		"ava": "3.15.0",
 		"dotenv": "8.2.0",
 		"eslint": "7.17.0",
