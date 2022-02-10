@@ -50,7 +50,7 @@
 		"@typescript-eslint/eslint-plugin": "5.11.0",
 		"@typescript-eslint/parser": "5.11.0",
 		"@types/url-join": "4.0.1",
-		"@types/sinon": "10.0.10",
+		"@types/sinon": "10.0.11",
 		"ava": "4.0.1",
 		"dotenv": "16.0.0",
 		"eslint": "7.32.0",
