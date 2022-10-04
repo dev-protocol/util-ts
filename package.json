@@ -35,7 +35,7 @@
 		"bent": "7.3.12",
 		"ethereum-waffle": "3.4.4",
 		"ramda": "^0.28.0",
-		"axios": "0.27.2",
+		"axios": "1.0.0",
 		"sinon": "14.0.1",
 		"url-join": "4.0.1"
 	},
