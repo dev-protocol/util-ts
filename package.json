@@ -36,7 +36,7 @@
 		"ethereum-waffle": "3.4.4",
 		"ramda": "^0.28.0",
 		"axios": "1.2.2",
-		"sinon": "15.0.0",
+		"sinon": "15.0.1",
 		"url-join": "4.0.1"
 	},
 	"devDependencies": {
