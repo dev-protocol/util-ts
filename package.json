@@ -33,7 +33,7 @@
 	"license": "MPL-2.0",
 	"dependencies": {
 		"ethers": "^5.7.2",
-		"ramda": "^0.28.0"
+		"ramda": "^0.29.0"
 	},
 	"devDependencies": {
 		"@ava/typescript": "3.0.1",
@@ -41,7 +41,7 @@
 		"@rollup/plugin-typescript": "8.5.0",
 		"@types/dotenv": "8.2.0",
 		"@types/node": "18.15.11",
-		"@types/ramda": "0.28.22",
+		"@types/ramda": "0.29.0",
 		"@typescript-eslint/eslint-plugin": "5.49.0",
 		"@typescript-eslint/parser": "5.49.0",
 		"ava": "4.3.3",
