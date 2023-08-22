@@ -3,9 +3,11 @@
 	"version": "3.0.0",
 	"description": "TypeScript Utilities",
 	"main": "dist/index.js",
+	"module": "./dist/index.mjs",
 	"exports": {
 		"import": "./dist/index.mjs",
-		"require": "./dist/index.js"
+		"require": "./dist/index.js",
+		"types": "./dist/util-ts.d.ts"
 	},
 	"types": "./dist/util-ts.d.ts",
 	"files": [
