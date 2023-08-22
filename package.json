@@ -1,6 +1,6 @@
 {
 	"name": "@devprotocol/util-ts",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "TypeScript Utilities",
 	"main": "dist/index.js",
 	"module": "./dist/index.mjs",
