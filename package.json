@@ -41,7 +41,7 @@
 		"@rollup/plugin-multi-entry": "4.1.0",
 		"@rollup/plugin-typescript": "8.5.0",
 		"@types/dotenv": "8.2.0",
-		"@types/node": "18.17.6",
+		"@types/node": "18.17.12",
 		"@types/ramda": "0.29.3",
 		"@typescript-eslint/eslint-plugin": "5.62.0",
 		"@typescript-eslint/parser": "5.62.0",
